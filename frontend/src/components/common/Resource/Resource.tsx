@@ -23,7 +23,6 @@ import Divider from '@mui/material/Divider';
 import Grid, { GridProps, GridSize } from '@mui/material/Grid';
 import IconButton from '@mui/material/IconButton';
 import Input, { InputProps } from '@mui/material/Input';
-import InputLabel from '@mui/material/InputLabel';
 import Paper from '@mui/material/Paper';
 import { BaseTextFieldProps } from '@mui/material/TextField';
 import Typography from '@mui/material/Typography';
@@ -528,8 +527,8 @@ export function SecretField(props: InputProps) {
       </Grid>
       <Grid item xs>
         <Input
-          readOnly={!showPassword}
-          type="password"
+          readOnly
+          type="text"
           fullWidth
           multiline={showPassword}
           maxRows="20"

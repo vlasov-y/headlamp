@@ -100,10 +100,10 @@ run-backend:
 	@echo "**** Warning: Running with Helm and dynamic-clusters endpoints enabled. ****"
 
 ifeq ($(UNIXSHELL),true)
-	HEADLAMP_BACKEND_TOKEN=headlamp HEADLAMP_CONFIG_ENABLE_HELM=true HEADLAMP_CONFIG_ENABLE_DYNAMIC_CLUSTERS=true ./backend/headlamp-server -dev -proxy-urls https://artifacthub.io/* -listen-addr=localhost
+	HEADLAMP_BACKEND_TOKEN=headlamp HEADLAMP_CONFIG_ENABLE_HELM=true HEADLAMP_CONFIG_ENABLE_DYNAMIC_CLUSTERS=true ./backend/headlamp-server -dev -proxy-urls https://artifacthub.io/*
 else
 	@echo "**** Running on Windows without bash or zsh. ****"
-	@cmd /c "set HEADLAMP_BACKEND_TOKEN=headlamp&& set HEADLAMP_CONFIG_ENABLE_HELM=true&& set HEADLAMP_CONFIG_ENABLE_DYNAMIC_CLUSTERS=true&& backend\headlamp-server -dev -proxy-urls https://artifacthub.io/* -listen-addr=localhost"
+	@cmd /c "set HEADLAMP_BACKEND_TOKEN=headlamp&& set HEADLAMP_CONFIG_ENABLE_HELM=true&& set HEADLAMP_CONFIG_ENABLE_DYNAMIC_CLUSTERS=true&& backend\headlamp-server -dev -proxy-urls https://artifacthub.io/*"
 endif
 
 run-backend-with-metrics:
@@ -113,10 +113,10 @@ ifeq ($(UNIXSHELL),true)
     HEADLAMP_CONFIG_METRICS_ENABLED=true \
     HEADLAMP_CONFIG_ENABLE_HELM=true \
     HEADLAMP_CONFIG_ENABLE_DYNAMIC_CLUSTERS=true \
-    ./backend/headlamp-server -dev -proxy-urls https://artifacthub.io/* -listen-addr=localhost
+    ./backend/headlamp-server -dev -proxy-urls https://artifacthub.io/*
 else
 	@echo "**** Running on Windows without bash or zsh. ****"
-	@cmd /c "set HEADLAMP_BACKEND_TOKEN=headlamp&& set HEADLAMP_CONFIG_METRICS_ENABLED=true&& set HEADLAMP_CONFIG_ENABLE_HELM=true&& set HEADLAMP_CONFIG_ENABLE_DYNAMIC_CLUSTERS=true&& backend\headlamp-server -dev -proxy-urls https://artifacthub.io/* -listen-addr=localhost"
+	@cmd /c "set HEADLAMP_BACKEND_TOKEN=headlamp&& set HEADLAMP_CONFIG_METRICS_ENABLED=true&& set HEADLAMP_CONFIG_ENABLE_HELM=true&& set HEADLAMP_CONFIG_ENABLE_DYNAMIC_CLUSTERS=true&& backend\headlamp-server -dev -proxy-urls https://artifacthub.io/*"
 endif
 
 run-backend-with-traces:
@@ -126,10 +126,10 @@ ifeq ($(UNIXSHELL),true)
     HEADLAMP_CONFIG_TRACING_ENABLED=true \
     HEADLAMP_CONFIG_ENABLE_HELM=true \
     HEADLAMP_CONFIG_ENABLE_DYNAMIC_CLUSTERS=true \
-    ./backend/headlamp-server -dev -proxy-urls https://artifacthub.io/* -listen-addr=localhost
+    ./backend/headlamp-server -dev -proxy-urls https://artifacthub.io/*
 else
 	@echo "**** Running on Windows without bash or zsh. ****"
-	@cmd /c "set HEADLAMP_BACKEND_TOKEN=headlamp&& set HEADLAMP_CONFIG_TRACING_ENABLED=true&& set HEADLAMP_CONFIG_ENABLE_HELM=true&& set HEADLAMP_CONFIG_ENABLE_DYNAMIC_CLUSTERS=true&& backend\headlamp-server -dev -proxy-urls https://artifacthub.io/* -listen-addr=localhost"
+	@cmd /c "set HEADLAMP_BACKEND_TOKEN=headlamp&& set HEADLAMP_CONFIG_TRACING_ENABLED=true&& set HEADLAMP_CONFIG_ENABLE_HELM=true&& set HEADLAMP_CONFIG_ENABLE_DYNAMIC_CLUSTERS=true&& backend\headlamp-server -dev -proxy-urls https://artifacthub.io/*"
 endif
 
 run-frontend:
